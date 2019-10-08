@@ -1,0 +1,72 @@
+在linux下查看进程用 ps -ef|grep XXX
+
+通过ps及top命令查看进程信息时，只能查到相对路径，查不到的进程的详细信息，如绝对路径等。这时，我们需要通过以下的方法来查看进程的详细信息：
+Linux在启动一个进程时，系统会在/proc下创建一个以PID命名的文件夹，在该文件夹下会有我们的进程的信息，其中包括一个名为exe的文件即记录了绝对路径，通过ll或ls –l命令即可查看。
+ll /proc/PID
+cwd符号链接的是进程运行目录；
+exe符号连接就是执行程序的绝对路径；
+cmdline就是程序运行时输入的命令行命令；
+environ记录了进程运行时的环境变量；
+fd目录下是进程打开或使用的文件的符号连接。
+
+netstat -anp |grep 18081
+  784  ps -ef |grep 13314
+  785  ll /proc/13314
+  
+  
+  [root@lnsytest2 ~]# netstat -anp |grep 10000
+tcp        0      0 0.0.0.0:10000           0.0.0.0:*               LISTEN      21411/java          
+[root@lnsytest2 ~]# ps -ef|grep 21411
+root     15902 15374  0 11:20 pts/0    00:00:00 grep --color=auto 21411
+hive     21411     1  0 Sep30 ?        01:39:32 /usr/jdk64/jdk1.8.0_77/bin/java -Xmx1024m -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/hive -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hive -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/lib/hadoop/lib/native/Linux-amd64-64:/usr/lib/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Xmx1024m -Xmx5956m -Dhadoop.security.logger=INFO,NullAppender org.apache.hadoop.util.RunJar /usr/lib/hive/lib/hive-service-1.2.2-bc1.4.0.jar org.apache.hive.service.server.HiveServer2 -hiveconf hive.metastore.uris=  -hiveconf hive.log.file=hiveserver2.log -hiveconf hive.log.dir=/var/log/hive
+[root@lnsytest2 ~]# ll /proc/21411
+total 0
+dr-xr-xr-x  2 hive hadoop 0 Oct  8 11:20 attr
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 autogroup
+-r--------  1 hive hadoop 0 Oct  8 11:22 auxv
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 cgroup
+--w-------  1 hive hadoop 0 Oct  8 11:22 clear_refs
+-r--r--r--  1 hive hadoop 0 Sep 30 16:56 cmdline
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 comm
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 coredump_filter
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 cpuset
+lrwxrwxrwx  1 hive hadoop 0 Oct  8 11:22 cwd -> /home/hive
+-r--------  1 hive hadoop 0 Oct  8 11:22 environ
+lrwxrwxrwx  1 hive hadoop 0 Oct  8 11:22 exe -> /usr/jdk64/jdk1.8.0_77/bin/java
+dr-x------  2 hive hadoop 0 Sep 30 16:56 fd
+dr-x------  2 hive hadoop 0 Oct  8 11:22 fdinfo
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 gid_map
+-r--------  1 hive hadoop 0 Oct  8 11:22 io
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 limits
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 loginuid
+dr-x------  2 hive hadoop 0 Oct  8 11:22 map_files
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 maps
+-rw-------  1 hive hadoop 0 Oct  8 11:22 mem
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 mountinfo
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 mounts
+-r--------  1 hive hadoop 0 Oct  8 11:22 mountstats
+dr-xr-xr-x  5 hive hadoop 0 Oct  8 11:22 net
+dr-x--x--x  2 hive hadoop 0 Oct  8 11:22 ns
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 numa_maps
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 oom_adj
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 oom_score
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 oom_score_adj
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 pagemap
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 personality
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 projid_map
+lrwxrwxrwx  1 hive hadoop 0 Oct  8 11:22 root -> /
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 sched
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 schedstat
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 sessionid
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 setgroups
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 smaps
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 stack
+-r--r--r--  1 hive hadoop 0 Sep 30 16:56 stat
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 statm
+-r--r--r--  1 hive hadoop 0 Sep 30 16:56 status
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 syscall
+dr-xr-xr-x 70 hive hadoop 0 Oct  7 09:20 task
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 timers
+-rw-r--r--  1 hive hadoop 0 Oct  8 11:22 uid_map
+-r--r--r--  1 hive hadoop 0 Oct  8 11:22 wchan
+[root@lnsytest2 ~]# cd /home/hive/
