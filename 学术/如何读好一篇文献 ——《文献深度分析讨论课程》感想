@@ -1,0 +1,24 @@
+http://blog.sciencenet.cn/blog-3392387-1134851.html
+
+入海大以来，第一堂导师正式课《文献深度分析讨论课程》。这是导师自2014年归国以来在海大第一次开课。老师严谨的逻辑思维与极高的科学品味与科学视野令我钦佩。由于这门课程首开，课程名称貌似很鸡肋（有人可能在想，谁还不会读文献啊？对不起，有可能你真不会），导致只有12名“知道自己不会读文献”的同学选择这门课。但这种小班式反而能更好的可以让我们与老师交流探讨。
+
+这一次课上给我们分享了一篇文献（详见链接），并带我们深入探讨了这篇paper的深层逻辑。
+
+首先题目：Progressive Loss of Function in a Limb Enhancer during Snake Evolution
+
+题目是一篇文章的灵魂，好的题目能吸引读者的眼球，激发读者的兴趣。首先老师让我们翻译这个题目，然后问了一个问题：“看到这个题目后，如果让你来做这个课题，你认为你会怎么做？”我在脑海中就在想各种想法，什么比较基因组学，基因功能，enhancer激活敲除等等等等……然后老师让大家畅所欲言一同讨论，说不管什么想法，不管你的想法多么多么幼稚可笑都OK，不怕你想错就怕你不想。自由发挥后，老师接着讲到，好，然后带着我们这些想法往下看，看看作者有没有同你的想法一致，看看作者是用了什么方法来研究这个课题，我们与作者的差距在哪里。Ps.看到一篇好的paper，题目最好要研究5min，考虑以上这些问题，激发你的思维，然后与作者PK，找共同找差距，不断思考不断学习。
+
+然后细读摘要（ABSTRACT or SUMMARY）：The evolution of body shape is thought to be tightly coupled to changes in regulatory sequences, but specific molecular events associated with major morphological transitions in vertebrates have remained elusive. We identified snake-specific sequence changes within an otherwise highly conserved longrange limb enhancer of Sonic hedgehog (Shh). Transgenic mouse reporter assays revealed that the in vivo activity pattern of the enhancer is conserved across a wide range of vertebrates, including fish, but not in snakes. Genomic substitution of the mouse enhancer with its human or fish ortholog results in normal limb development. In contrast, replacement with snake orthologs caused severe limb reduction. Synthetic restoration of a single transcription factor binding site lost in the snake lineage reinstated full in vivo function to the snake enhancer. Our results demonstrate changes in a regulatory sequence associated with a major body plan transition and highlight the role of enhancers in morphological evolution.
+
+摘要简洁点明论文的来龙去脉。身体形态的进化往往与调节序列的变化有密切的联系，但是与脊椎动物主要形态转变相关的特定分子事件仍然不明了/elusive。作者找到了在其他动物中高度保守的Shh基因的enhancer却在蛇中出现了特异性的突变。转基因鼠报告监测显示enhancer在脊椎动物中是保守的，包括鱼类，但not in snakes。用人和鱼的同源enhancer替换老鼠的enhancer，结果显示为正常的limb development。然而用蛇的enhancer替换造成了老鼠严重的Limb退化。至此这篇paper已经透彻，作者行文逻辑清晰明了。找到了蛇中缺失的enhancer，并在老鼠中验证了它的功能。
+
+逻辑清晰了，然后就看作者的数据充不充分，能不能支撑他的结论。数据就是看图。 Fig.1一般不是Key data所在，这篇paper的Fig.1同样如此，相当于introduction，介绍了ZRS enhancer人胚胎中的in situ，以及其在大多数脊椎动物中保守，除了蛇。Fig.2开始展示其Key data。Fig.2显示作者做了大量的工作，Fig.1中所有生物ZRS enhancer的胚胎中的in situ。OK，关键的实验来了Fig.3，图文清晰的显示了“serpentized”mouse的产生过程。（serpentized是个很有意思的词，科学家自娱自乐的精神）
+
+
+讨论环节：让我们发问。我提出了一个问题，这个enhancer是怎么找到的？对，这是一个很关键的问题。老师答道，去读introduction或者去查询作者的实验室就会知道，他们是专门做enhancer的，这篇paper也得益于他们的庞大的动物enhancer数据库，通过比对工作找到了很多特异的enhancer发挥着关键的功能。然后老师让我们顺着作者的思路去思考一下还可以做什么工作，有什么好的想法，如果有Good ideas，他可以给我们申请院士资助。这时候同学们各抒己见，可以做尾巴、前肢等等动物形态相关的研究。我们的大胆设想也得到了老师的认可，并给我们展示了相关拓展性的研究，比如蝙蝠的前肢为何长，金鱼的尾巴为何多姿，海马为什么没有鳍等等。而且都是高水平的文章，这下子让同学们全都兴奋的起来。
+
+这篇paper差不多可以结束了，如果还有感兴趣的地方还可以细读，比如具体方法什么的。最后也是我们经常忽略的，就是作者或者说作者所属团队本身，老师带我们查询了一作和通讯作者。发现他们来自一个很有名的做enhancer的实验室Mammalian Functional Genomics Laboratory，通讯作者Len A. Pennacchio和Axel Visel是该实验室的两位负责人，在他们已毕业的人员中我们找到了北京基因组研究所的王前飞研究员，博士生导师、精准基因组医学重点实验室副主任，在做应用研究。这样就梳理了一个他们Lab的谱系，老师让我们多积累这个的谱系，这会对我们以后的研究、合作等有很多帮助。另外既然这一篇paper对你影响这么大，为何不找找这个实验室发表的其他paper呢。还有这个实验室的其他资源也可以挖掘一下，比如enhancer数据库及其他资源。
+
+一堂课让我们收获很多，导师以一个领路人的姿态，教我们如何系统的解读一篇文献，如何去理清作者的行文逻辑，学习文章的长处，而后激发我们的思考。
+
+有感而发。
