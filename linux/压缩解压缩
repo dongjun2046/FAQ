@@ -1,0 +1,3 @@
+centos 把文件打包为tar.gz命令： tar -zcvf 文件名.tar.gz 要压缩的文件/文件夹
+
+例如，把webfile目录（包括里面的文件）压缩为webfile.tar.gz，命令：tar -zcvf webfile.tar.gz webfile
