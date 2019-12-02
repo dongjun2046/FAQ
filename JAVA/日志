@@ -1,0 +1,60 @@
+https://www.cnblogs.com/pc-boke/articles/9121782.html
+
+一、前言　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+
+  String.format 用得不习惯，希望格式模版会这样 {0}, this is {1}s cat.{1},this is {0}s dog. 后来发现 java.text.MessageFormat.format 可以满足我这个小小的愿望。
+
+ 
+
+二、静态方法
+
+String MessageFormat.format(String fmt, Object...args)
+  入参fmt为MessageFormat模式参数。
+
+ 
+
+三、MessageFormat模式　　　　　　　　　　　　　　　　　　　　　 
+
+  格式：  
+
+ ArgumentIndex[,FormatType[,FormatStyle]] 
+
+  ArgumentIndex ，是从0开始的入参位置索引。
+
+  FormatType ，指定使用不同的Format子类对入参进行格式化处理。值范围如下：
+
+     number：调用NumberFormat进行格式化
+
+     date：调用DateFormat进行格式化
+
+     time：调用DateFormat进行格式化
+
+     choice：调用ChoiceFormat进行格式化
+
+  FormatType ，设置FormatType中使用的格式化样式。值范围如下：
+
+    short，medium，long，full，integer，currency，percent，SubformPattern(子格式模式，形如#.##)
+
+  注意： FormatType 和 FormatStyle 主要用于对日期时间、数字、百分比等进行格式化。
+
+  示例——将数字1.23格式为1.2：
+
+double num = 1.23;
+String str = MessageFormat.format("{0,number,#.#}", num);
+ 
+
+四、MessageFormat注意点　　　　　　　　　　　　　　　　　　　　
+
+  1. 两个单引号才表示一个单引号，仅写一个单引号将被忽略。
+
+  2. 单引号会使其后面的占位符均失效，导致直接输出占位符。
+
+MessageFormat.format("{0}{1}", 1, 2); // 结果12
+MessageFormat.format("'{0}{1}", 1, 2); // 结果{0}{1}
+MessageFormat.format("'{0}'{1}", 1, 2); // 结果{0}
+因此可以用于输出左花括号(单写左花括号会报错，而单写右花括号将正常输出)
+
+MessageFormat.format("'{'{0}}", 2); // 结果{2
+因此前言中的示例应该写为
+
+{0}, this is {1}''s cat.{1},this is {0}''s dog.
