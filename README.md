@@ -243,10 +243,7 @@ decrypted product: 1200
 ​        当今正处于IT技术和应用的变革期，云、大数据、人工智能等技术的发展让人类社会从信息化向智能化升级，数据作为当今信息化和未来智能化时代的关键生产资料已经成为个人、组织和国家的重要经济资产和核心战略资本。现在可用的SWHE算法大部分也都是基于RSA模组的，所以和RSA算法有一样的问题，那就是一旦整数分解问题被解决，那么算法将变得不安全。而且现在已经证明，量子计算机已经可以解决整数分解问题。所以随着量子计算机的普及，这些算法都会有很大的破解风险。所以目前主流的加密算法已经开始研究格密码学等方向，格密码学已经被证明是量子计算安全的算法。格上标准困难问题至今没有量子算法可以破解或者撼动它，因此格上标准困难问题被认为是抗量子的。格上的加密方案最大特征：是一个含有噪音的方案。加密时往里添加噪音，主要是为了进一步提高安全性。然而恰好是这个噪音，导致加密的形式与解密形式比较简单。这种特性为构造全同态加密埋下了伏笔。当前，保护数据的隐私和安全已经成为全社会亟需且亟待解决的重要问题，因此同态加密的瓶颈一旦被突破，一定会拥有广阔的前景!
 ## 参考链接
 https://zhuanlan.zhihu.com/p/52808772 <br>
-https://blog.csdn.net/jason_cuijiahui/article/details/79121702
-
-https://blog.csdn.net/qq_33885461/article/details/86555560
-
-https://www.csee.umbc.edu/~kunliu1/research/Paillier.html
-
-https://www.cs.cmu.edu/~odonnell/hits09/gentry-homomorphic-encryption.pdf
+https://blog.csdn.net/jason_cuijiahui/article/details/79121702<br>
+https://blog.csdn.net/qq_33885461/article/details/86555560<br>
+https://www.csee.umbc.edu/~kunliu1/research/Paillier.html<br>
+https://www.cs.cmu.edu/~odonnell/hits09/gentry-homomorphic-encryption.pdf<br>
