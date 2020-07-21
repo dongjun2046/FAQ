@@ -5,6 +5,7 @@
 ​        同态加密的研究可以追溯到20世纪70年代，在RSA密码体制刚提出不久，1978年Rivest等人在题为《On data banks and privacy homomorphic》中首次提出了全同态加密的概念，也称为隐私同态。这一概念的提出成为密码学界的开放难题，同态加密是一种加密形式，允许用户直接对密文进行特定的代数运算，得到数据仍是加密的结果，与对明文进行同样的操作再将结果加密一样。同态加密优势在于用户在数据加密的情形下仍能对特定的加密数据进行分析和检索，提高了数据处理的效率，保证了数据安全传送，而且正确的加密数据仍能得到正确的解密结果。国外学者相继研究了满足乘法或满足加法的同态加密算法，在此基础上还提出了能同时满足有限次乘法与加法的同态密码。但直到2009年IBM研究员Gentry才构造出第一个全同态加密方案，解决了困扰密码学界三十多年的难题，同时掀起一股研究全同态加密方案的热潮。Gentry，一个斯坦福大学的博士生，基于理想格提出一个全同态加密方案。Craig Gentry. Fully Homomorphic Encryption Using Ideal Lattices. In the 41st ACM Symposium on Theory of Computing (STOC), 2009. 这篇论文是来自于他的博士论文：Craig Gentry. A Fully Homomorphic Encryption Scheme (Ph.D. thesis)。 Gentry的全同态加密方案是基于理想格构造的。
 
 ​        与普通加密算法只关注数据存储安全不同，同态加密算法关注的是数据处理安全，提供对加密数据进行加法和乘法处理的功能。数据处理权与数据所有权可以分离，这样企业可以防止自身数据泄露的同时，利用云服务的算力。使用同态加密算法，不持有私钥的用户也可以对加密数据进行处理，处理过程不会泄露任何原始数据信息。同时，持有私钥的用户对处理过的数据进行解密后，可得到正确的处理结果。
+![https://ww3.sinaimg.cn/thumb150/97191c8fgy1ggytp2qyh3j21hc2hoe81.jpg]()
 ### 同态分类
 ​        同态加密类型，其实按照实现程度分为两种：部分同态加密SWHE(Somewhat Homomorphic Encryption) 和 全同态加密FHE(Fully Homomorphic Encryption)。这两个区别在于：
 
